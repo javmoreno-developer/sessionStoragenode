@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body class="container">
+
+    <div id="contenedor">
+		<h2>Práctica. CRUD. JSES6. 'cookies'</h2>
+		<form id="form1" action="add" method="post">
+			<fieldset>
+				<legend>Guardar nombre y clave</legend>
+				<table id="tabla" class="filas">
+					<thead>
+						<tr>
+							<th><label name="labelNombre" for="nombre">Introduce un nombre</label></th>
+							<th><label name="labelClave" for="clave">Introduce una clave</label></th>
+						</tr>
+						<tr>
+							<th>
+								<input type="text" id="nombre" class="control" name="nombre" size="20"
+									placeholder="Escribe un nombre..." required />
+							</th>
+							<th>
+								<input type="text" id="valor" class="control" name="valor" size="20"
+									placeholder="Escribe un valor..." required />
+							</th>
+							<th>
+								<button type="submit" id="guardar"> Guardar
+									<img src="../img/save.svg" alt="Guardar" width="22" height="22"
+										style="vertical-align: middle" />
+								</button>
+							</th>
+						</tr>
+					</thead>
+					<tbody id="cuerpo">
+                        <ul>
+                            
+                            <% for (const property in people) { %>
+                                <li>
+                                    <strong><%= property %> - <%= people[property]%></strong>
+                                    <i class="bi bi-x-circle del_icon" id="<%=property%>"></i>
+									<i class="bi bi-pencil-fill upd_icon" id="<%=property%>,<%=people[property]%>"></i>
+                                   
+                                </li>
+                                <% }%>
+                     
+                        </ul>
+					</tbody>
+				</table>
+			</fieldset>
+		</form>
+	</div>
+
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>
