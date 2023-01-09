@@ -7,16 +7,16 @@
 
 <body class="container">
 
-    <div id="contenedor">
-		<h2>Práctica. CRUD. JSES6. 'cookies'</h2>
-		<form id="form1" action="add" method="post">
+	<div id="contenedor">
+		<h2>Práctica. CRUD. JSES6. 'sessionStorage'</h2>
+		<form id="form1" action="#" method="post">
 			<fieldset>
-				<legend>Guardar nombre y clave</legend>
+				<legend>Guardar nombre y valor</legend>
 				<table id="tabla" class="filas">
 					<thead>
 						<tr>
 							<th><label name="labelNombre" for="nombre">Introduce un nombre</label></th>
-							<th><label name="labelClave" for="clave">Introduce una clave</label></th>
+							<th><label name="labelValor" for="valor">Introduce un valor</label></th>
 						</tr>
 						<tr>
 							<th>
@@ -28,32 +28,19 @@
 									placeholder="Escribe un valor..." required />
 							</th>
 							<th>
-								<button type="submit" id="guardar"> Guardar
-									<img src="../img/save.svg" alt="Guardar" width="22" height="22"
+								<button type="button" id="guardar"> Guardar
+									<img src="./img/save.svg" alt="Guardar" width="22" height="22"
 										style="vertical-align: middle" />
 								</button>
 							</th>
 						</tr>
 					</thead>
 					<tbody id="cuerpo">
-                        <ul>
-                            
-                            <% for (const property in people) { %>
-                                <li>
-                                    <strong><%= property %> - <%= people[property]%></strong>
-                                    <i class="bi bi-x-circle del_icon" id="<%=property%>"></i>
-									<i class="bi bi-pencil-fill upd_icon" id="<%=property%>,<%=people[property]%>"></i>
-                                   
-                                </li>
-                                <% }%>
-                     
-                        </ul>
 					</tbody>
 				</table>
 			</fieldset>
 		</form>
 	</div>
-
     <footer>
         <%- include('../partials/footer'); %>
     </footer>
